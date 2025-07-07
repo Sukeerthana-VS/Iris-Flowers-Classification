@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/4/41/Iris_versicolor_3.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-row {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #flower-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #flower-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container glass">
+        <h1>Enter Iris Flower Features</h1>
+        <form id="iris-form">
+            <div class="form-row">
+                <label>Sepal Length</label>
+                <input type="number" step="any" id="sepal_length" required placeholder="e.g. 5.1">
+            </div>
+            <div class="form-row">
+                <label>Sepal Width</label>
+                <input type="number" step="any" id="sepal_width" required placeholder="e.g. 3.5">
+            </div>
+            <div class="form-row">
+                <label>Petal Length</label>
+                <input type="number" step="any" id="petal_length" required placeholder="e.g. 1.4">
+            </div>
+            <div class="form-row">
+                <label>Petal Width</label>
+                <input type="number" step="any" id="petal_width" required placeholder="e.g. 0.2">
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="result"></div>
+        <div id="flower-image"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
